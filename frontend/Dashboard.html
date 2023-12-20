@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dredger Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button-container button {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>DREDGING ANALYSIS</h1>
+    </header>
+    <center>
+        <br>
+        <h2> Select an year</h2>
+     <br>
+     <br>
+     <div class="button-container">
+    <button style="width: 120px; height: 60px; font-size: 26px;"  onclick="goTo2021()">2021</button>
+
+    <!-- JavaScript code -->
+    <script>
+        // JavaScript function to be executed on button click
+        function goTo2021() {
+            // Replace 'target_page.html' with the actual filename or URL of the page you want to navigate to
+            //window.location.href = 'ar21.html';
+            window.open('ar21.html', '_self');
+        }
+    </script>
+    
+    <button style="width: 120px; height: 60px; font-size: 26px;" onclick="goTo2022()">2022</button>
+
+    <!-- JavaScript code -->
+    <script>
+        // JavaScript function to be executed on button click
+        function goTo2022() {
+            // Replace 'target_page.html' with the actual filename or URL of the page you want to navigate to
+            window.open('ar22.html', '_self');
+        }
+    </script>
+    
+    <button style="width: 120px; height: 60px; font-size: 26px;" onclick="goTo2023()">2023</button>
+
+    <!-- JavaScript code -->
+    <script>
+        // JavaScript function to be executed on button click
+        function goTo2023() {
+            // Replace 'target_page.html' with the actual filename or URL of the page you want to navigate to
+            window.open('ar23.html', '_self');
+        }
+    </script>
+    </center>
+</div>
+</body>
+
+</html>

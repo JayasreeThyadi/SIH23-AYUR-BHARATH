@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Center vertically */
+            height: 100vh;
+        }
+
+        #title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        form {
+            position: relative;
+            z-index: 2;
+            width: 60%;
+            padding: 10px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input {
+            width: 98%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        
+        select {
+            width: 98%;
+            padding: 8px;   /* Add padding to the dropdown */
+            box-sizing: border-box; 
+            margin-bottom: 10px; /* Add margin below the dropdown for spacing */
+        }
+
+        #backgroundImage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        #additionalInputsContainer {
+            margin-top: 10px;
+        }
+
+        input[type="button"] {
+            width: 10%;
+            margin: 0 auto; /* Center the submit button */
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        #submitButton {
+            background-color: #0056b3; /* Green background color */
+            margin: 0 auto;
+            color: white; /* White text color */
+            padding: 10px 20px; /* Padding for better appearance */
+            font-size: 16px; /* Font size */
+            border: none; /* Remove border */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+
+        input[type="checkbox"] {
+            vertical-align: middle; /* Align checkboxes vertically with their labels */
+            margin-right: 2px; /* Add some space between checkbox and label */
+            margin-bottom: 0px; /* Reduce the bottom margin to reduce the gap */
+        }
+   
+    </style>
+</head>
+
+<body>
+    <div id="title">DECISION SUPPORT SYSTEM</div>
+
+    <img id="backgroundImage" src="D:\GVPCEW\SIH\img\bg.jpg">
+
+    
+    <form action="/submit" method="post">
+        <label for="input1">Select Location:</label>
+        <select id="input1" name="input1">
+            <option value="Cochin">Cochin</option>
+            <option value="Visakhapatnam">Visakhapatnam</option>
+            <option value="Mangalore">Mangalore</option>
+            <!-- Add more options as needed -->
+        </select>
+    
+        <label for="input2">Enter Month:</label>
+        <select id="input2" name="input2">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+    
+        <label>Mark the Available Dredgers:
+            <input type="checkbox" name="option1" value="Dredger-8" vertical-align:middle margin-right: 5px>
+            Dredger-8
+        </label>
+        <label>
+            <input type="checkbox" name="option2" value="Dredger-14"vertical-align:middle margin-right: 5px>
+            Dredger-14
+        </label>
+        <label>
+            <input type="checkbox" name="option3" value="Dredger-15"vertical-align:middle margin-right: 5px>
+            Dredger-15
+        </label>
+        <label>
+            <input type="checkbox" name="option4" value="Dredger-16"vertical-align:middle margin-right: 5px>
+            Dredger-16
+        </label>
+        <label>
+            <input type="checkbox" name="option5" value="Dredger-19"vertical-align:middle margin-right: 5px>
+            Dredger-19
+        </label>
+        <label>
+            <input type="checkbox" name="option6" value="Dredger-20"vertical-align:middle margin-right: 5px>
+            Dredger-20
+        </label>
+        <label>
+            <input type="checkbox" name="option6" value="Dredger-21">
+            Dredger-21
+        </label>
+    
+        <div id="additionalInputsContainer"></div>
+    
+        <!-- <input type="submit" onclick="displayDredger()" value="Submit"> -->
+        <button type="button" id="submitButton" onclick="displayDredger()">Submit</button>
+        <p id="dredgerNumber"></p>
+    </form>
+    
+    <script>
+         // Function to retrieve checked checkboxes and append their values to an array
+
+        function displayDredger() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            const checkboxValues = [];
+            checkboxes.forEach((checkbox) => {
+            checkboxValues.push(checkbox.value);
+        });
+        
+        const dredgerNumberParagraph = document.getElementById('dredgerNumber');
+        if (checkboxValues.length > 0) {
+                const dredgerIndex = Math.floor(Math.random() * checkboxValues.length);
+                const dredgerValue = checkboxValues[dredgerIndex];
+                dredgerNumberParagraph.textContent = `${dredgerValue} can be used.`;
+            } else {
+                dredgerNumberParagraph.textContent = 'Please enter values before clicking submit.';
+            }
+        }
+
+    </script>
+    
+
+</body>
+
+</html>

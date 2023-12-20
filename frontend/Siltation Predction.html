@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiltationPredction</title>
+</head>
+<body>
+    <div id="title"><h1  align="center">Siltation Prediction</h1></div>
+    <form action="/submit" method="post">
+        <label for="input1" align:top>Select Location:</label>
+        <select id="input1" name="input1" onchange="showImage()">
+            <option value="Cochin">Cochin</option>
+            <option value="Visakhapatnam">Visakhapatnam</option>
+            <option value="Mangalore">Mangalore</option>
+        </select>
+        </form>
+        <div id="imageContainer">
+            <img id="displayedImage" src="" >
+</div>
+<script>
+function showImage() {
+  const selectedImage = document.getElementById('input1').value;
+  const imageElement = document.getElementById('displayedImage');
+  
+  // Display different images based on the selected option
+  if (selectedImage === 'Cochin') {
+    imageElement.src = 'D:/GVPCEW/SIH/img/Cochin.png';
+    imageElement.alt = 'Cochin';
+  } else if (selectedImage === 'Visakhapatnam') {
+    imageElement.src = 'D:/GVPCEW/SIH/img/Vizag.png';
+    imageElement.alt = 'Visakhapatnam';
+  } else if (selectedImage === 'Mangalore') {
+    imageElement.src = 'D:/GVPCEW/SIH/img/Mangalore.png';
+    imageElement.alt = 'Mangalore';
+  }
+  else {
+    // If "Select an Image" or default option is selected, clear the displayed image
+    imageElement.src = '';
+    imageElement.alt = 'Displayed Image';
+  }
+}
+</script>
+</body>
+
+</html>

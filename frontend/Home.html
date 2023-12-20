@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url();
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #backgroundImage {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.2;
+        }
+
+        nav {
+            display: none;
+            background-color: #A9A9A9;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            text-align: top;
+            width: 150px;
+            top: 10px;
+        }
+
+        nav a {
+            display: block;
+            padding: 0px;
+            min-width: 80%;
+            text-align: top;
+            font-size:medium;
+            text-decoration: none;
+            top: 10px;
+            line-height: 0.5;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            display: block;
+            position: fixed;
+            top: 10px;
+            left: 15px;
+            z-index: 2;
+        }
+
+        #content {
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration-color:blue;
+            position: relative;
+            top: 50%; /* Move the content down by half of its height */
+            transform: translateY(-50%); /* Center the content vertically */
+        }
+        
+        #image1{
+         
+            position: fixed;
+            bottom: 10%;
+            left: 50%;
+            right:100%;
+            top:35%;
+            transform: translateX(-50%);
+            width: 150px;
+            height:150px; /* Adjust the width as needed */
+            border-radius:50%;
+
+       
+          }
+         #image2{
+         
+            position: fixed;
+            bottom: 10%;
+            left: 20%;
+            right:70%;
+            top:35%;
+            transform: translateX(-50%);
+            width: 150px;
+            height:150px; /* Adjust the width as needed */
+            border-radius:50%;
+
+       
+          }
+         #image3{
+         
+            position: fixed;
+            bottom: 10%;
+            left: 80%;
+            right:10%;
+            top:35%;
+            transform: translateX(-50%);
+            width: 150px;
+            height:150px; /* Adjust the width as needed */
+            border-radius:50%;
+
+       
+          }
+          #text1{
+            
+            position: fixed;
+            bottom: 12%;
+            left: 21%;
+            transform: translateX(-50%);
+            vertical-align: bottom;
+        }
+           
+        #text2{
+            
+            position: fixed;
+            bottom: 12%;
+            left: 50%;
+            transform: translateX(-50%);
+            vertical-align: bottom;
+        }
+         #text3{
+            
+            position: fixed;
+            bottom: 12%;
+            left: 83%;
+            transform: translateX(-50%);
+            vertical-align: bottom;
+        }
+            
+
+
+
+        
+        #content h3 {
+            margin: 0;
+             text-align:bottom;
+            color:#00008b;
+        }
+
+        p.medium {
+            line-height: 4.5;
+        }
+
+        #logo {
+            position: absolute;
+            top: 10px; /* Adjust the distance from the top */
+            left: 50%;
+            transform: translateX(-50%); /* Center the logo horizontally */
+            max-width: 200px; /* Adjust the size of your logo */
+        }
+       h4{
+          color:blue;
+         }
+      
+
+    </style>
+</head>
+
+<body>
+   <div>
+    <img  id="image1" src="D:\GVPCEW\SIH\img\cochinport.jpg">
+    <p id="text1"><b>Cochin port</b>,<br>First Transhipment Port</p>
+    <img  id="image2" src="D:\GVPCEW\SIH\img\vizagport.jpg">
+    <p id="text2"><b>Vizag port</b>,<br>Natural Port</p>
+    <img  id="image3" src="D:\GVPCEW\SIH\img\mumbaiport.jpg">
+    <p id="text3"><b>Mumbai port</b>,<br>Largest Port in India</p>
+    <img id="backgroundImage" src="D:\\GVPCEW\\SIH\\img\\bg.jpg">
+    <div id="logo">
+        <img src="D:\GVPCEW\SIH\img\logorem.png" style="width: 100%;">
+    </div>
+    <div class="menu-icon" onclick="toggleNav()">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
+    <br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+    <div id="content">
+        
+        <h3>DREDGING ANALYSIS AND DECISION SUPPORT SYSTEM</h3>
+    </div>
+
+    <nav id="myNav">
+<br>
+        <p class="medium">
+            <a href="Dashboard.html">
+                <h2>Dashboard</h2>
+            </a>
+            <a href="DecSupp.html">
+                <h4>Decision&nbspSupport</h4>
+            </a>
+            <a href="Siltation Predction.html">
+                <h4>Siltation&nbspPrediction</h4>
+            </a>
+            <h4>Settings</h4>
+            <h4>Help</h4>
+            <h4>Tools</h4>
+            <h4>Profile</h4>
+        </p> 
+    </nav>
+
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("myNav");
+            if (nav.style.display == "block") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>
